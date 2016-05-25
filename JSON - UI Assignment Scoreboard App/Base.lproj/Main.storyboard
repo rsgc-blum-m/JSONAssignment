@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2yW-jk-Ysp">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Leagues List View Controller-->
+        <scene sceneID="4fA-u9-HCq">
+            <objects>
+                <viewController id="Fpe-Nq-cNZ" userLabel="Leagues List View Controller" customClass="scoresListViewController" customModule="JSON___UI_Assignment_Soccer_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LBY-Kx-WnN"/>
+                        <viewControllerLayoutGuide type="bottom" id="uhs-5h-nqL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="23w-3q-Chx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4Ii-7s-TwW">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4Ii-7s-TwW" firstAttribute="top" secondItem="LBY-Kx-WnN" secondAttribute="bottom" constant="30" id="ElN-J1-2Tj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4Ii-7s-TwW" secondAttribute="trailing" constant="-20" id="Lzc-JA-PCd"/>
+                            <constraint firstItem="4Ii-7s-TwW" firstAttribute="leading" secondItem="23w-3q-Chx" secondAttribute="leadingMargin" constant="-20" id="NSv-yT-MUq"/>
+                            <constraint firstItem="uhs-5h-nqL" firstAttribute="top" secondItem="4Ii-7s-TwW" secondAttribute="bottom" id="cUx-E2-e2W"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="i0d-As-ufU"/>
+                    <connections>
+                        <outlet property="tableView" destination="4Ii-7s-TwW" id="8Al-Ig-e8c"/>
+                        <segue destination="ceC-bf-Mvp" kind="show" identifier="mainToOtherSegue" id="ADn-GM-XWe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sfY-q5-qRr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1531" y="261"/>
+        </scene>
+        <!--League Stats View Controller-->
+        <scene sceneID="WeU-Au-QeO">
+            <objects>
+                <viewController id="ceC-bf-Mvp" userLabel="League Stats View Controller" customClass="leagueStatsViewController" customModule="JSON___UI_Assignment_Soccer_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KXj-cJ-TkX"/>
+                        <viewControllerLayoutGuide type="bottom" id="Twb-Jo-4Ug"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hf9-a8-jBE">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Current Matchday" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GHu-ac-Phr" userLabel="Current Matchday Label">
+                                <rect key="frame" x="226" y="172" width="169" height="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Games in a Season" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MOj-Nx-cWl" userLabel="Games in a Season Label">
+                                <rect key="frame" x="220" y="233" width="183" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Matchdays In a Season" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="twY-Gf-a0d" userLabel="Matchdays in a Season Label">
+                                <rect key="frame" x="200" y="318" width="218" height="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="League Stats" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJk-Di-hcd">
+                                <rect key="frame" x="35" y="93" width="550" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MOj-Nx-cWl" firstAttribute="centerX" secondItem="GHu-ac-Phr" secondAttribute="centerX" id="1Mc-mT-w4i"/>
+                            <constraint firstItem="jJk-Di-hcd" firstAttribute="leading" secondItem="hf9-a8-jBE" secondAttribute="leadingMargin" constant="5" id="1nd-ts-S5a"/>
+                            <constraint firstItem="twY-Gf-a0d" firstAttribute="top" secondItem="MOj-Nx-cWl" secondAttribute="bottom" constant="20" id="3YY-Lb-8Bk"/>
+                            <constraint firstItem="twY-Gf-a0d" firstAttribute="centerX" secondItem="GHu-ac-Phr" secondAttribute="centerX" id="77i-lW-eQh"/>
+                            <constraint firstItem="twY-Gf-a0d" firstAttribute="top" secondItem="MOj-Nx-cWl" secondAttribute="bottom" constant="37" id="8PG-F9-i00"/>
+                            <constraint firstItem="GHu-ac-Phr" firstAttribute="centerX" secondItem="hf9-a8-jBE" secondAttribute="centerX" id="GpM-fu-wtu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MOj-Nx-cWl" secondAttribute="trailing" constant="50" id="JAA-8C-2hl"/>
+                            <constraint firstItem="Twb-Jo-4Ug" firstAttribute="top" secondItem="twY-Gf-a0d" secondAttribute="bottom" constant="278" id="JJ3-FB-EdW"/>
+                            <constraint firstItem="MOj-Nx-cWl" firstAttribute="centerX" secondItem="hf9-a8-jBE" secondAttribute="centerX" id="Kiy-Xv-Tio"/>
+                            <constraint firstItem="jJk-Di-hcd" firstAttribute="top" secondItem="KXj-cJ-TkX" secondAttribute="bottom" constant="30" id="Lui-Yb-kDN"/>
+                            <constraint firstItem="GHu-ac-Phr" firstAttribute="top" secondItem="jJk-Di-hcd" secondAttribute="bottom" constant="37" id="awg-yu-DQL"/>
+                            <constraint firstItem="twY-Gf-a0d" firstAttribute="centerX" secondItem="hf9-a8-jBE" secondAttribute="centerX" id="d3G-2i-keT"/>
+                            <constraint firstItem="MOj-Nx-cWl" firstAttribute="top" secondItem="GHu-ac-Phr" secondAttribute="bottom" constant="35" id="eKR-7b-Jjv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="twY-Gf-a0d" secondAttribute="trailing" constant="50" id="mpa-hS-tZD"/>
+                            <constraint firstItem="GHu-ac-Phr" firstAttribute="leading" secondItem="hf9-a8-jBE" secondAttribute="leadingMargin" constant="30" id="oyB-AZ-fjt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jJk-Di-hcd" secondAttribute="trailing" constant="5" id="vRv-7c-A0P"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="currentMatchday1" destination="GHu-ac-Phr" id="SK6-2i-WHQ"/>
+                        <outlet property="gamesInASeason1" destination="MOj-Nx-cWl" id="WVg-3X-rRd"/>
+                        <outlet property="matchdaysInASeason1" destination="twY-Gf-a0d" id="0c2-Du-KdR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rjz-nE-vOC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2265" y="261"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ZfK-UB-xBG">
+            <objects>
+                <navigationController id="UzC-oM-euz" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yWB-Qq-4B6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Fpe-Nq-cNZ" kind="relationship" relationship="rootViewController" id="KuC-fi-ZLm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zvc-Rs-fpb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="796" y="253"/>
+        </scene>
+        <!--Opening View Controller-->
+        <scene sceneID="1c0-AI-Moc">
+            <objects>
+                <viewController id="2yW-jk-Ysp" customClass="openingViewController" customModule="JSON___UI_Assignment_Soccer_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nDQ-PQ-a2O"/>
+                        <viewControllerLayoutGuide type="bottom" id="0dQ-cY-Uc8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="C3y-tN-p5k">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="teN-3B-qV5">
+                                <rect key="frame" x="38" y="277" width="520" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="81" id="EB9-81-LK3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Click to see what leagues are avaliable"/>
+                                <connections>
+                                    <segue destination="UzC-oM-euz" kind="presentation" id="Bns-lk-cmp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="teN-3B-qV5" secondAttribute="trailing" constant="20" id="OTq-vD-Nib"/>
+                            <constraint firstItem="teN-3B-qV5" firstAttribute="leading" secondItem="C3y-tN-p5k" secondAttribute="leadingMargin" constant="20" id="zjs-8i-3c4"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p1u-CQ-DFa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="35" y="253"/>
+        </scene>
+    </scenes>
+</document>
